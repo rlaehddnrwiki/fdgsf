@@ -10,12 +10,7 @@ async function start(id, pw) {
         if (dialog.message().includes("게시물을 삭제하시겠습니까?")) {
             console.log("게시물을 삭제하시겠습니까?")
             dialog.accept()
-        } else {
-            alarm.textContent = dialog.message()
-            login_button.disabled = false
-            await browser.close();
-        } 
-
+        }
     });
     await page.goto('https://www.dcinside.com/');
     await page.type("#user_id", id)
@@ -38,8 +33,6 @@ async function start(id, pw) {
         await page.waitForTimeout(2000)
     }
     alarm.textContent = "다 지움 ! 수고하셨습니다. 이제 다 지워졌으니 "
-    login_button.disabled = false
-    //await browser.close();
 };
 
 start("아이디","패스워드")
