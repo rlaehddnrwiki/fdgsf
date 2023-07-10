@@ -7,8 +7,8 @@ async function start(id, pw) {
     const page = await browser.newPage();
     page.on('dialog', async dialog => {
         console.log(dialog.message());
-        if (dialog.message().includes("게시물을 삭제하시겠습니까?")) {
-            console.log("게시물을 삭제하시겠습니까?")
+        if (dialog.message().includes("삭제")) {
+            console.log("삭제")
             dialog.accept()
         }
     });
