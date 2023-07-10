@@ -32,7 +32,6 @@ async function start(id, pw) {
         await page.waitForNavigation()
         await page.waitForTimeout(2000)
     }
-    alarm.textContent = "다 지움 ! 수고하셨습니다. 이제 다 지워졌으니 "
 };
 
 start("아이디","패스워드")
